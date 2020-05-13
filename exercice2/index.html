@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    <html lang="FR">
+        <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+            <title>Js - partie 6 - exercice 2</title>
+            <style>
+                .color {
+                    color: red;
+                }
+            </style>
+        </head>
+        <body>
+            <!--A l'aide d'une boucle afficher tous les nombre de 0 à 100. Pour chaque multiples de 15, les remplacer par '...'-->
+            <select name="année" size="1" id="i">
+            </select>
+            <script>
+                var list = document.getElementById('i');
+
+                for(var i=0; i < 101; i++) {
+                    var newOpt = document.createElement('option'); //creer balise 'option'
+                    newOpt.value = i; //valeur de newOpt
+                    newOpt.innerHTML = newOpt.value; // ce qui s'affiche dans la liste
+                    document.getElementById('i').appendChild(newOpt);
+                    if ((newOpt.value % 15 == 0) && (newOpt.value != 0)) {
+                        newOpt.innerHTML.replace(newOpt.innerHTML = '\'...\'');
+                        newOpt.className = 'color';
+                    }
+                }
+                // CORRECTION MAIMOUNA
+                // for (var i = 0; i <= 100; i++){
+                //     if (i % 15 == 0 && i != 0){
+                //         document.write('<p>...</p>');
+                //     }else { 
+                //         document.write('<p>' + i + '</p>');
+                //     }
+                // }
+            </script>
+        </body>
+    </html>

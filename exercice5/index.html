@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+    <html lang="fr" dir="ltr">
+        <head>
+            <meta charset="utf-8" />
+            <title>Js - partie 6 - Exercice 5</title>
+            <style>
+            </style>
+        </head>
+        <body>
+        <!--Créer deux variables firstNumber et secondNumber. Leur donner une valeur comprise entre 1 et 10. Tant que le résultat de la multiplication des deux nombres est inférieur à 250:
+        Afficher le résultat.
+        Assigner le résultat à secondNumber.-->
+            <script>
+                var firstNumber = 2;
+                var secondNumber = 4;
+                // for(var i = 0; i < 250; i = firstNumber * secondNumber) {
+                //     var result = firstNumber * secondNumber;
+                //         secondNumber = result;
+                //         document.write('<p>' + result + '</p>');
+                //     }
+                while (firstNumber * secondNumber < 250){
+                    secondNumber = firstNumber * secondNumber;
+                    document.write('<p>' + secondNumber + '</p>');
+                }
+            </script>
+        </body>
+    </html>
